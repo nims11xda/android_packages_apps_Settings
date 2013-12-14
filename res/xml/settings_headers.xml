@@ -139,6 +139,16 @@
         <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
     </header>
 
+    <!-- PERSONAL -->
+    <header android:id="@+id/personal_section"
+        android:title="@string/header_category_personal" />
+
+    <!-- DARK PA -->
+    <header
+        android:id="@+id/theme_settings"
+        android:fragment="com.android.settings.slim.themes.ThemeSettings"
+        android:icon="@drawable/ic_settings_theme"
+        android:title="@string/theme_settings_title" />
 
     <!-- Additional Settings -->
     <header
@@ -146,11 +156,6 @@
         android:fragment="com.android.settings.AOSPAL.AdditionalSettings"
         android:title="@string/additional_settings_title"
         android:icon="@drawable/ic_settings_system" />
-
-
-    <!-- PERSONAL -->
-    <header android:id="@+id/personal_section"
-        android:title="@string/header_category_personal" />
 
     <!-- Location -->
     <header
