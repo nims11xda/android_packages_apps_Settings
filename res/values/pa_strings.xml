@@ -769,4 +769,12 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="select_sound_pack_summary">Select the active sound pack</string>
     <string name="default_sound_pack">Default (System)</string>
     <string name="error_pack_install">Error while installing the sound pack</string>
+
+    <!-- Themes -->
+    <string name="theme_settings_title">Dark PA</string>
+    <string name="theme_auto_mode_title">Switch theme</string>
+    <string name="theme_auto_mode_off">Manual</string>
+    <string name="theme_auto_mode_lightsensor">On light condition change</string>
+    <string name="theme_auto_mode_twilight">On daytime</string>
+    <string name="theme_auto_switch_mode_error">Automatic light condition change mode is enabled. Manual switching is not possible.</string>
 </resources>
