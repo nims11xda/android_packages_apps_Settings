@@ -45,17 +45,17 @@
             android:persistent="false"
             android:ringtoneType="ringtone" />
 
-    <com.android.settings.slim.IncreasingRingPreference
-            android:key="increasing_ring"
-            android:title="@string/increasing_ring_title"
-            android:dialogTitle="@string/increasing_ring_title"
-            android:persistent="false"
-            android:streamType="ring" />
-
     <CheckBoxPreference
          android:key="vibrate_when_ringing"
          android:title="@string/vibrate_when_ringing_title"
          android:persistent="false" />
+
+    <com.android.settings.IncreasingRingPreference
+        android:key="increasing_ring"
+        android:title="@string/increasing_ring_title"
+        android:dialogTitle="@string/increasing_ring_title"
+        android:persistent="false"
+        android:streamType="ring" />
 
     <PreferenceCategory
             android:title="@string/sound_category_system_title"/>
@@ -88,6 +88,10 @@
             android:key="haptic_feedback"
             android:title="@string/haptic_feedback_enable_title"
             android:defaultValue="true" />
+
+    <com.android.settings.widget.SeekBarPreference
+            android:key="vibration_duration"
+            android:title="@string/minimum_vibration_duration" />
 
     <ListPreference
             android:key="emergency_tone"

@@ -13,10 +13,11 @@ import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.preference.PreferenceCategory;
 import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.SeekBarPreference;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.Utils;
+import com.android.internal.util.paranoid.DeviceUtils;
 
 public class AdditionalSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -29,16 +30,18 @@ public class AdditionalSettings extends SettingsPreferenceFragment implements
     private static final String KEY_DUAL_PANEL = "force_dualpanel"; 
     private static final String KEY_REVERSE_DEFAULT_APP_PICKER = "reverse_default_app_picker";
     private static final String LOCKSCREEN_POWER_MENU = "lockscreen_power_menu";
-    private static final String ENABLE_NAVIGATION_BAR = "enable_nav_bar";
+    private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
+    private static final String KEY_CATEGORY_QS_STATUSBAR = "qs_statusbar";
+    private static final String KEY_OMNI_FEATURES = "omni_features";
 
     ListPreference mQuickPulldown;
     private CheckBoxPreference mHeadsetHookLaunchVoice;
     private CheckBoxPreference mLockScreenPowerMenu;
     private CheckBoxPreference mDualPanel;
-    private CheckBoxPreference mEnableNavigationBar;
     private CheckBoxPreference mReverseDefaultAppPicker;
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
+    private SeekBarPreference mNavigationBarHeight;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,14 +52,17 @@ public class AdditionalSettings extends SettingsPreferenceFragment implements
         final ContentResolver resolver = getActivity().getContentResolver();
 
         mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
-        if (Utils.isTablet(getActivity())) {
-            prefs.removePreference(mQuickPulldown);
-        } else {
-            mQuickPulldown.setOnPreferenceChangeListener(this);
-            int statusQuickPulldown = Settings.System.getIntForUser(getContentResolver(),
-                    Settings.System.QS_QUICK_PULLDOWN, 1, UserHandle.USER_CURRENT);
-            mQuickPulldown.setValue(String.valueOf(statusQuickPulldown));
-            updatePulldownSummary();
+        mQuickPulldown.setOnPreferenceChangeListener(this);
+        int statusQuickPulldown = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.QS_QUICK_PULLDOWN, 1, UserHandle.USER_CURRENT);
+        mQuickPulldown.setValue(String.valueOf(statusQuickPulldown));
+        updatePulldownSummary();
+
+        PreferenceCategory qsStatusbar =
+            (PreferenceCategory) findPreference(KEY_CATEGORY_QS_STATUSBAR);
+        if (!DeviceUtils.isPhone(getActivity())) {
+            qsStatusbar.removePreference(findPreference(QUICK_PULLDOWN));
+            qsStatusbar.removePreference(findPreference(KEY_OMNI_FEATURES));
         }
 
         final PreferenceCategory headsethookCategory =
@@ -97,14 +103,11 @@ public class AdditionalSettings extends SettingsPreferenceFragment implements
             mLockScreenPowerMenu.setChecked(Settings.Secure.getInt(getContentResolver(),
                     Settings.Secure.LOCK_SCREEN_POWER_MENU, 1) == 1);
         }
-
-        boolean hasNavBarByDefault = getResources().getBoolean(
-                com.android.internal.R.bool.config_showNavigationBar);
-        boolean enableNavigationBar = Settings.System.getInt(getContentResolver(),
-                Settings.System.NAVIGATION_BAR_SHOW, hasNavBarByDefault ? 1 : 0) == 1;
-        mEnableNavigationBar = (CheckBoxPreference) findPreference(ENABLE_NAVIGATION_BAR);
-        mEnableNavigationBar.setChecked(enableNavigationBar);
-        mEnableNavigationBar.setOnPreferenceChangeListener(this);
+        mNavigationBarHeight = (SeekBarPreference) findPreference(KEY_NAVIGATION_BAR_HEIGHT);
+        mNavigationBarHeight.setProgress((int)(Settings.System.getFloat(getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_HEIGHT, 1f) * 100));
+        mNavigationBarHeight.setTitle(getResources().getText(R.string.navigation_bar_height) + " " + mNavigationBarHeight.getProgress() + "%");
+        mNavigationBarHeight.setOnPreferenceChangeListener(this);
     }
 
     private boolean isToggled(Preference pref) {
@@ -124,7 +127,6 @@ public class AdditionalSettings extends SettingsPreferenceFragment implements
             Settings.System.putIntForUser(getContentResolver(), Settings.System.QS_QUICK_PULLDOWN,
                     statusQuickPulldown, UserHandle.USER_CURRENT);
             updatePulldownSummary();
-            return true;
         } else if (KEY_LISTVIEW_ANIMATION.equals(key)) {
             int value = Integer.parseInt((String) newValue);
             int index = mListViewAnimation.findIndexOfValue((String) newValue);
@@ -141,13 +143,14 @@ public class AdditionalSettings extends SettingsPreferenceFragment implements
                     value);
             mListViewInterpolator.setValue(String.valueOf(value));
             mListViewInterpolator.setSummary(mListViewInterpolator.getEntry());
-        } else if (preference == mEnableNavigationBar) {
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.NAVIGATION_BAR_SHOW,
-                    ((Boolean) newValue) ? 1 : 0);
-            return true;
+        } else if (preference == mNavigationBarHeight) {
+            Settings.System.putFloat(getActivity().getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_HEIGHT, (Integer)newValue / 100f);
+            mNavigationBarHeight.setTitle(getResources().getText(R.string.navigation_bar_height) + " " + (Integer)newValue + "%");
+        } else {
+            return false;
         }
-        return false;
+        return true;
     }
 
     @Override
