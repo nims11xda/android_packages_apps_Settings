@@ -114,6 +114,7 @@
     <string name="navring_action_torch">Toggle torch</string>
     <string name="navring_action_google_now">Google Now</string>
     <string name="navring_choose_action_title">Choose action</string>
+    <string name="navring_action_last_app">Switch to last app</string>
 
     <string name="lockscreen_target_info">Drag the slider to targets to assign shortcuts</string>
     <!-- Description of the unlock target in the Slide unlock screen. [CHAR LIMIT=NONE] -->
@@ -667,4 +668,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Minimum Vibration Duration -->
     <string name="minimum_vibration_duration">Minimum vibration duration</string>
+
+    <!-- Carrier label -->
+    <string name="notification_carrier_label_title">Carrier label</string>
+    <string name="notification_custom_carrier_label_title">Custom carrier label</string>
+    <string name="notification_custom_carrier_label_explain">Please enter a new label. Enter an empty label to revert to stock label.</string>
+    <string name="notification_custom_carrier_label_notset">Custom label currently not set</string>   
 </resources>
