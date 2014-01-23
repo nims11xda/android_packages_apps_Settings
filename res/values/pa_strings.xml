@@ -292,6 +292,10 @@ USB networks). This setting is reset on reboot</string>
     <string name="navigation_bar_reset_toast">Navigation bar reset to default</string>
     <string name="navigation_bar_menu_editable">Editable</string>
     <string name="navigation_bar_menu_locked">Locked</string>
+    
+    <!--PA version-->
+    <string name="pa_version">ParanoidAndroid version</string>
+    <string name="pa_version_default">Unknown</string>
 
     <!-- Quiet hours -->
     <string name="quiet_hours_title">Quiet hours</string>
