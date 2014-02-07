@@ -33,6 +33,9 @@
     <string name="qs_pulldown_summary">Allows to use the left or right side of the status bar to open the QuickSettings</string>
     <string name="statusbar_network_summary">Enables the network speed to appear in the Statusbar</string>
 
+    <!-- Statusbar: Double tap to sleep  -->
+    <string name="status_bar_double_tap_to_sleep_title">Double-tap to sleep</string>
+
     <!-- Anonymous Statistics #CM -->
     <string name="anonymous_statistics_title">CyanogenMod statistics</string>
 
@@ -727,10 +730,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="smart_pulldown_dismissable">Dismissable</string>
     <string name="smart_pulldown_persistent">Persistent</string>
 
-    <!-- security settings menu unlock -->
-    <string name="unlock_menu_unlock_title">Menu unlock</string>
-    <string name="unlock_menu_unlock_summary">Pressing the menu button unlocks the device</string>
-
     <!-- Telo Radio -->
     <string name="telo_radio_settings_title">Connection manager</string>
     <string name="telo_radio_enable_title">Enable manager</string>
@@ -777,4 +776,17 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="theme_auto_mode_lightsensor">On light condition change</string>
     <string name="theme_auto_mode_twilight">On daytime</string>
     <string name="theme_auto_switch_mode_error">Automatic light condition change mode is enabled. Manual switching is not possible.</string>
+
+   <!-- Home & Menu key unlock -->
+    <string name="unlock_menu_unlock_title">Menu unlock</string>
+    <string name="unlock_menu_unlock_summary">Pressing the menu button unlocks the device</string>
+    <string name="unlock_home_unlock_title">Home unlock</string>
+    <string name="unlock_home_unlock_summary">Pressing the home button unlocks the device</string>
+    <string name="security_unlock_category">Unlock</string>
+
+    <!-- Captive portal toggle -->
+    <string name="captive_toggle">Captive portal detection</string>
+    <string name="captive_toggle_summary">Toggle captive portal detection</string>
+    <string name="captive_server">Server for captive portal detection</string>
+    <string name="captive_server_summary">Server used to detect captive portal. Leave empty for default.</string>
 </resources>
