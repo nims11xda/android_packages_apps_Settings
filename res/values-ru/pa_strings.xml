@@ -30,14 +30,14 @@
 
     <!-- Additional Settings - Summaries -->
     <string name="navigation_ring_summary">Установить свои виджеты на панели навигации кроме Google Now</string>
-    <string name="qs_pulldown_summary">Позволяет использовать левую или правую сторону статусбара чтобы открыть Быстрые Настройки</string>
-    <string name="statusbar_network_summary">Показывает скорость интернета в Статусбаре</string>
+    <string name="qs_pulldown_summary">Позволяет использовать левую или правую сторону статусбара чтобы открыть Быстрые настройки</string>
+    <string name="statusbar_network_summary">Показать скорость интернета в Статусбаре</string>
 
     <!-- Anonymous Statistics #CM -->
     <string name="anonymous_statistics_title">Статистика CyanogenMod</string>
 
     <!-- Volume Key Cursor Control -->
-    <string name="volume_key_cursor_control_title">Контроль Курсора Клавишами Громкости</string>
+    <string name="volume_key_cursor_control_title">Контроль курсора клавишами громкости</string>
     <string name="volume_key_cursor_control_off">Выключено</string>
     <string name="volume_key_cursor_control_on">Клавиша громкости вверх двигает курсор влево</string>
     <string name="volume_key_cursor_control_on_reverse">Клавиша громкости вниз двигает курсор вправо</string>
@@ -51,8 +51,8 @@
     <!--Notification light dialogs-->
     <string name="edit_light_settings">Редактировать установки подсветки</string>
     <string name="pulse_speed_title">Длина и скорость пульсации</string>
-    <string name="default_time">Обычный</string>
-    <string name="custom_time">Собственный</string>
+    <string name="default_time">Обычная</string>
+    <string name="custom_time">Собственная</string>
     <string name="dialog_test">Тест</string>
     <string name="dialog_delete_title">Удалить</string>
     <string name="dialog_delete_message">Удалить этот пункт?</string>
@@ -75,37 +75,37 @@
     <string name="notification_light_voicemail_title">Голосовая почта</string>
 
     <!--Values for the notification light pulse spinners-->
-    <string name="pulse_length_always_on">Всегда включен</string>
-    <string name="pulse_length_very_short">Очень короткий</string>
-    <string name="pulse_length_short">Короткий</string>
-    <string name="pulse_length_normal">Обычный</string>
-    <string name="pulse_length_long">Длинный</string>
-    <string name="pulse_length_very_long">Очень длинный</string>
-    <string name="pulse_speed_very_fast">Очень быстрый</string>
-    <string name="pulse_speed_fast">Быстрый</string>
-    <string name="pulse_speed_normal">Обычный</string>
-    <string name="pulse_speed_slow">Медленно</string>
-    <string name="pulse_speed_very_slow">Очень медленно</string>
+    <string name="pulse_length_always_on">Всегда включена</string>
+    <string name="pulse_length_very_short">Очень короткая</string>
+    <string name="pulse_length_short">Короткая</string>
+    <string name="pulse_length_normal">Обычная</string>
+    <string name="pulse_length_long">Длинная</string>
+    <string name="pulse_length_very_long">Очень длинная</string>
+    <string name="pulse_speed_very_fast">Очень быстрая</string>
+    <string name="pulse_speed_fast">Быстрая</string>
+    <string name="pulse_speed_normal">Обычная</string>
+    <string name="pulse_speed_slow">Медленная</string>
+    <string name="pulse_speed_very_slow">Очень медленная</string>
 
     <!--Lockscreen blur-->
-    <string name="blur_behind_title">Затуманивание фона на Экране Блокировки</string>
+    <string name="blur_behind_title">Затуманивание фона на Экране блокировки</string>
     <string name="blur_behind_summary">Добавляет приятный эффект расплывчатости фона</string>
     <string name="blur_radius_title">Радиус расплывания</string>
     <string name="blur_radius_summary">Совместить радиус расплывчатости с фоном</string>
 
     <!-- Navigation bar settings -->
-    <string name="navigation_bar">Навигационная Панель</string>
-    <string name="navigation_ring_title">Прямые установки</string>
-    <string name="navigation_bar_summary">Включить или выключить Навигационную Панель.</string>
-    <string name="navigation_bar_height">Высота Навигационной Панели:</string>
+    <string name="navigation_bar">Навигационная панель</string>
+    <string name="navigation_ring_title">Ярлыки</string>
+    <string name="navigation_bar_summary">Включить или выключить Навигационную панель.</string>
+    <string name="navigation_bar_height">Высота Навигационной панели:</string>
 
     <!-- Navigation ring shortcuts -->
-    <string name="navring_target_reset_message">Удалить все пользовательские установки на Навигационной Панели и восстановить параметры по умолчанию?</string>
-    <string name="navring_target_reset">Установки Навигационной Панели восстановлены по умолчанию</string>
-    <string name="navring_target_save">Прямые установки на Навигационной Панели сохранены</string>
-    <string name="navring_action_open_ime_switcher">Открыть IME Переключатель</string>
+    <string name="navring_target_reset_message">Удалить все пользовательские установки на Навигационной панели и восстановить параметры по умолчанию?</string>
+    <string name="navring_target_reset">Установки Навигационной панели восстановлены по умолчанию</string>
+    <string name="navring_target_save">Ярлыки на Навигационной панели сохранены</string>
+    <string name="navring_action_open_ime_switcher">Открыть IME переключатель</string>
     <string name="navring_action_kill_app">Выключить приложение</string>
-    <string name="navring_action_none">Ничего</string>
+    <string name="navring_action_none">Нет</string>
     <string name="navring_action_take_screenshot">Сделать снимок экрана</string>
     <string name="navring_action_ring_vibrate">Звонок/Вибрация</string>
     <string name="navring_action_ring_silent">Звонок/Беззвучно</string>
@@ -138,7 +138,7 @@
 
     <!-- Reset Profiles -->
     <string name="profile_reset_title">Восстановить</string>
-    <string name="profile_reset_message">Удалить все пользовательские профили и группы приложений и восстановить их по умолчанию?</string>
+    <string name="profile_reset_message">Удалить все пользовательские профили и группы приложений и восстановить по умолчанию?</string>
 
     <!-- Lock Screen Shortcuts -->
     <string name="lockscreen_target_reset_title">Восстановить</string>
@@ -182,19 +182,19 @@
     <string name="adb_over_network_summary">Включить отладку TCP/IP через интерфейсы сети (Wi-Fi,
 USB сети). Эта установка восстанавливается при перезагрузке</string>
     <!-- Warning for Adb over Network -->
-    <string name="adb_over_network_warning">ПРЕДУПРЕЖДЕНИЕ: Когда включен ADB через сеть, ваш телефон
+    <string name="adb_over_network_warning">ПРЕДУПРЕЖДЕНИЕ: Когда ADB через сеть активирован, ваш телефон
  открыт для проникновения со всех подключенных сетей, включая GSM data network!\n\nИспользуйте этот параметр
- только если вы подключены к сетям которым доверяете.\n\nВы действительно хотите включить этот параметр?</string>
+ только если вы подключены к сетям, которым доверяете.\n\nВы действительно хотите включить этот параметр?</string>
     <!-- ADB over network tile -->
     <string name="adb_tile">Плитка ADB через сеть</string>
     <string name="adb_tile_summary">Подключает adb через network tile к быстрым установкам.</string>
 
     <!-- Wi-Fi region code settings-->
-    <string name="wifi_setting_countrycode_title">Wi-Fi региональный код</string>
+    <string name="wifi_setting_countrycode_title">Региональный код WI-FI</string>
     <!-- Wi-Fi settings screen, setting summary for setting the wifi frequency band [CHAR LIMIT=50]. -->
     <string name="wifi_setting_countrycode_summary">Определить региональный код для Wi-Fi</string>
     <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
-    <string name="wifi_setting_countrycode_error">Проблемма при установке регионального кода.</string>
+    <string name="wifi_setting_countrycode_error">Проблема при установке регионального кода.</string>
     <!-- Wi-Fi settings diables message if Wifi is off-->
     <string name="wifi_setting_countrycode_disabled">Включить Wi-Fi чтобы подключить эту опцию.</string>
 
@@ -204,7 +204,7 @@ USB сети). Эта установка восстанавливается пр
     <!-- Safe headset volume restore checkbox -->
     <string name="safe_headset_volume_title">Безопасный уровень громкости в наушниках</string>
     <string name="safe_headset_volume_summary">Предотвратить высокий уровень громкости когда наушники подключаются впервые</string>
-    <string name="safe_headset_volume_warning_dialog_text">Прослушивание длительное время с высоким уровнем громкости может повредить ваш слух. Отключайте эту опцию с осторожностью.</string>
+    <string name="safe_headset_volume_warning_dialog_text">Использование высокой громкости длительное время может повредить ваш слух. Отключайте эту опцию с осторожностью.</string>
 
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <string name="wake_when_plugged_or_unplugged_title">Пробуждение при включении</string>
@@ -214,7 +214,7 @@ USB сети). Эта установка восстанавливается пр
     <string name="battery_around_lockscreen_ring">Символ батареи вокруг замка на экране блокировки</string>
 
     <!-- MediaScanner behavior on boot -->
-    <string name="media_scanner_on_boot_title">Поведение Сканера Медиафайлов при загрузке</string>
+    <string name="media_scanner_on_boot_title">Поведение Сканера медиафайлов при загрузке</string>
     <string name="media_scanner_on_boot_enabled">Сканировать содержимое</string>
     <string name="media_scanner_on_boot_ask">Запрос на сканирование (уведомление)</string>
     <string name="media_scanner_on_boot_disabled">Не сканировать медиафайлы</string>
@@ -287,9 +287,9 @@ USB сети). Эта установка восстанавливается пр
     <string name="navigation_bar_help_text">1 - Чтобы начать редактирование, коснитесь замка\n\n2 - Коснитесь любой кнопки чтобы включить или изменить её функциональность\n\n3 - Длительное касание любой кнопки изменяет порядок\n\n4 - Чтобы сохранить, снова дотроньтесь до замка\n\n5 - Чтобы установить систему по умолчанию, нажмите кнопку восстановления\n\n</string>
     <string name="navigation_bar_tips">\u2022 Действия могут быть назначены только для одной кнопки за раз\n\n\u2022 Кнопка Домой не может быть изменена\n\n\u2022 Боковые кнопки не могут быть изменены</string>
     <string name="navigation_bar_tips_title">Быстрые подсказки</string>
-    <string name="navigation_bar_reset_message">Удалить текущие установки и восстановить по умолчаниюt?</string>
-    <string name="navigation_bar_save_message">Установки Навигационной Панели сохранены </string>
-    <string name="navigation_bar_reset_toast">Навигационная Панель восстановлена по умолчанию</string>
+    <string name="navigation_bar_reset_message">Удалить текущие установки и восстановить по умолчанию?</string>
+    <string name="navigation_bar_save_message">Установки Навигационной панели сохранены </string>
+    <string name="navigation_bar_reset_toast">Навигационная панель восстановлена по умолчанию</string>
     <string name="navigation_bar_menu_editable">Разрешено редактирование</string>
     <string name="navigation_bar_menu_locked">Заблокировано</string>
     
@@ -302,7 +302,7 @@ USB сети). Эта установка восстанавливается пр
     <string name="halo_state_summary">Включение извещений о чёрном/белом списке</string>
     <string name="halo_state_black">Чёрный список</string>
     <string name="halo_state_white">Белый список</string>
-    <string name="halo_pause_title">Пауза активного приложения</string>
+    <string name="halo_pause_title">Пауза для активного приложения</string>
     <string name="halo_pause_summary">При открытии приложения с помощью Halo предыдущее приложение ставится на паузу</string>
     <string name="halo_ninja_title">Режим Ниндзя</string>
     <string name="halo_ninja_summary">Halo полностью исчезает при отсутствии задач</string>
@@ -337,14 +337,14 @@ USB сети). Эта установка восстанавливается пр
 
     <!-- Quiet hours -->
     <string name="quiet_hours_title">Тихий Час</string>
-    <string name="quiet_hours_summary">Установите часы в которые телефон будет беззвучным</string>
-    <string name="quiet_hours_enabled">Включить Тихий Час</string>
-    <string name="quiet_hours_enabled_on">Тихий Час будет включен</string>
+    <string name="quiet_hours_summary">Установите часы в которые звук на телефоне будет выключен</string>
+    <string name="quiet_hours_enabled">Включить Тихий час</string>
+    <string name="quiet_hours_enabled_on">Тихий час будет включен</string>
     <string name="quiet_hours_enabled_off">Уведомления будут работать в обычном режиме</string>
-    <string name="quiet_hours_start">Начало тихого часа</string>
-    <string name="quiet_hours_start_summary">Когда включитьрежим тихого часа</string>
-    <string name="quiet_hours_end">Окончание тихого часа</string>
-    <string name="quiet_hours_end_summary">Когда прекратить включение тихого часа</string>
+    <string name="quiet_hours_start">Начало Тихого часа</string>
+    <string name="quiet_hours_start_summary">Когда включить режим Тихого часа</string>
+    <string name="quiet_hours_end">Окончание Тихого часа</string>
+    <string name="quiet_hours_end_summary">Когда прекратить включение Тихого часа</string>
     <string name="quiet_hours_ringer_title">Беззвучный звонок</string>
     <string name="quiet_hours_ringer_on">Звонок не будет проигрываться</string>
     <string name="quiet_hours_ringer_off">Звонок будет проигрываться</string>
@@ -383,7 +383,7 @@ USB сети). Эта установка восстанавливается пр
     <string name="auto_brightness_level_dialog_title">Установка уровня света</string>
     <string name="auto_brightness_lux">Яркость окружающей среды (lux)</string>
     <string name="auto_brightness_backlight">Яркость экрана (%)</string>
-    <string name="auto_brightness_reset_dialog_title">Установить уровни по умолчанию?</string>
+    <string name="auto_brightness_reset_dialog_title">Восстановить уровни по умолчанию?</string>
     <string name="auto_brightness_reset_confirmation">Все уровни яркости будут восстановлены по умолчанию.</string>
     <string name="auto_brightness_split_lux_format">Позиция разделения (между <xliff:g id="min">%1$d</xliff:g> и <xliff:g id="max">%2$d</xliff:g> lux)</string>
     <string name="auto_brightness_level_options">Выбор уровня освещения</string>
@@ -396,13 +396,13 @@ USB сети). Эта установка восстанавливается пр
     <string name="auto_brightness_help_text"><b>Как рассчитывается яркость?</b>
 \n\n
 Диаграмма яркости рассчитывается представлением кубической интерполяции <i>интерполяции кубических кривых</i>
-на определённое количество <i>контрольных точек</i>. Это не \'обманная\' калькуляция где
-яркость экрана будет оставаться постоянной при определённом уровне яркости окружающей среды. таким образом,
+на определённое количество <i>контрольных точек</i>. Это не \'ложная\' калькуляция где
+яркость экрана будет оставаться постоянной при определённом уровне яркости окружающей среды. Таким образом,
 небольшие изменения яркости в окружающей среде не вызовут скачок яркости на экране; однако,
 будет несколько сложно предугадать точные последствия изменения контрольных точек.\n
 Чтобы облегчить задачу, можно посмотреть рассчётную кривую. Обратите внимание, что
-вы увидите кривую в виде <i>логарифмической</i> шкалы, чтобы все контрольные точки были показаны
-отдельно. Используя линейную шкалу, не представится возможным различить потенциально
+вы увидите кривую в виде <i>логарифмической</i> шкалы, для того чтобы показать все контрольные точки
+отдельно. Используя линейную шкалу, не представится возможным различать потенциально
 более важные контрольные точки на нижнем уровне яркости окружающей среды.
 \n\n
 <b>Как редактировать кривую яркости?</b>
@@ -426,7 +426,7 @@ USB сети). Эта установка восстанавливается пр
     <!-- Recents Ram Bar -->
     <string name="ram_bar">Последние события в линейке RAM</string>
     <string name="ram_bar_note_title">:Журнал</string>
-    <string name="ram_bar_note_summary">Эта линейка RAM показывает текущее использование памяти андроида (RAM) . Пожалуйста обратите внимание что кеширование приложений помогает вашему телефону открываться намного быстрее. Для дальнейших объяснений о том как работает управление памятью на андроид (RAM) , смотрите меню помощи.</string>
+    <string name="ram_bar_note_summary">Эта линейка RAM показывает текущее использование памяти андроида (RAM) . Пожалуйста обратите внимание что кеширование приложений помогает вашему телефону открывать приложения намного быстрее. Для дальнейших объяснений о том как работает управление памятью на андроид (RAM) , смотрите меню помощи.</string>
     <string name="ram_bar_mode_title">Последние события на линейке RAM</string>
     <string name="ram_bar_mode_dialog_title">Показывать последние события на линейке RAM</string>
     <string name="ram_bar_none">Ничего</string>
@@ -456,7 +456,7 @@ USB сети). Эта установка восстанавливается пр
 
     <!-- QuickSettings: Quick Pulldown -->
     <string name="title_quick_pulldown">Быстрое меню</string>
-    <string name="summary_quick_pulldown">при нажатии на край строки состояния выпадает меню Быстрах Установок</string>
+    <string name="summary_quick_pulldown">при нажатии на край строки состояния выпадает меню Быстрых установок</string>
     <string name="quick_pulldown_off">Выключено</string>
     <string name="quick_pulldown_left">Слева</string>
     <string name="quick_pulldown_right">Справа</string>
@@ -672,9 +672,9 @@ USB сети). Эта установка восстанавливается пр
 
     <!-- Carrier label -->
     <string name="notification_carrier_label_title">Название оператора</string>
-    <string name="notification_custom_carrier_label_title">Кастомное название оператора</string>
+    <string name="notification_custom_carrier_label_title">Ввести собственное название оператора</string>
     <string name="notification_custom_carrier_label_explain">Пожалуйста, введите своё название. Оставьте пустое место, чтобы вернуться к установкам по умолчанию.</string>
-    <string name="notification_custom_carrier_label_notset">Кастомное название пока не установлено</string>   
+    <string name="notification_custom_carrier_label_notset">Название оператора пока не установлено</string>   
 
     <!-- Status bar -->
     <string name="status_bar_title">Часы в строке состояния</string>
@@ -696,10 +696,10 @@ USB сети). Эта установка восстанавливается пр
     <string name="center_clock">Часы по центру</string>
     <string name="dont_show">Не показывать</string>
     <string name="clock_date_display">Дата</string>
-    <string name="clock_date_display_summary">Кастомная дата на дисплее перед часами</string>
+    <string name="clock_date_display_summary">Собственная дата на дисплее перед часами</string>
     <string name="clock_date_style">Стиль даты</string>
     <string name="clock_date_format">Формат даты</string>
-    <string name="clock_date_string_edittext_title">Должно соответствовать формату, например MM/dd/yy</string>
+    <string name="clock_date_string_edittext_title">Дата должна соответствовать формату, например MM/dd/yy</string>
     <string name="clock_date_string_edittext_summary">Введите строку</string>
     <string name="am_pm_clock_normal">Размер шрифта нормальный</string>
     <string name="am_pm_clock_small">Размер шрифта маленький</string>
@@ -710,7 +710,7 @@ USB сети). Эта установка восстанавливается пр
     <string name="clock_date_style_normal">Нормальный</string>
     <string name="clock_date_style_lowercase">Нижний регистр</string>
     <string name="clock_date_style_uppercase">Верхний регистр</string>
-    <string name="clock_date_format_custom">Кастомный формат java</string>
+    <string name="clock_date_format_custom">Собственный формат java</string>
     <string name="status_bar_clock_style_reset_message">Восстановить цвет часов по умолчанию?</string>
 
     <!-- Lockscreen widgets -->
@@ -718,7 +718,7 @@ USB сети). Эта установка восстанавливается пр
 
     <!-- QuickSettings: Smart Pulldown -->
     <string name="smart_pulldown_title">Умное появление шторки</string>
-    <string name="smart_pulldown_summary">Открыть Быстрые Установки если нет %1$s сообщений</string>
+    <string name="smart_pulldown_summary">Открыть Быстрые установки если нет %1$s сообщений</string>
     <string name="smart_pulldown_off">Выключено</string>
     <string name="smart_pulldown_dismissable">Выключаемая</string>
     <string name="smart_pulldown_persistent">Невыключаемая</string>
@@ -773,33 +773,33 @@ USB сети). Эта установка восстанавливается пр
 	<string name="swap_volume_buttons_summary">Менять назначение кнопок регулировки громкости согласно ориентации экрана</string>
 	
 	<!-- Lockscreen wallpaper -->
-	<string name="lockscreen_wallpaper">Custom wallpaper</string>
-	<string name="select_wallpaper">Select wallpaper</string>
-	<string name="status_bar_toggle_brightness">Brightness control</string>
-	<string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across status bar</string>
-	<string name="status_bar_toggle_info">Automatic brightness is enabled</string>
+	<string name="lockscreen_wallpaper">Собственные обои</string>
+	<string name="select_wallpaper">Выбрать обои</string>
+	<string name="status_bar_toggle_brightness">Контроль яркости</string>
+	<string name="status_bar_toggle_brightness_summary">Регулировать яркость экрана движением пальца по строке состояния</string>
+	<string name="status_bar_toggle_info">Автоматическая яркость включена</string>
 	
 	<!-- Screen state service -->
-    <string name="screen_state_toggles_title">Suspend Actions</string>
-    <string name="screen_state_toggles_enable_title">Enable</string>
-    <string name="screen_state_toggles_enable_summary">Actions will be executed on screen off. On screen on the previous state will be restored.</string>
-    <string name="screen_state_toggles_mobile_title">Mobile networks</string>
-    <string name="screen_state_toggles_location_title">Location</string>
-    <string name="screen_state_toggles_twog">Switch to 2G</string>
-    <string name="screen_state_toggles_twog_summary">Network mode will be switched to 2G on screen off</string>
-    <string name="screen_state_toggles_gps">Disable GPS</string>
-    <string name="screen_state_toggles_gps_summary">GPS based location service will be disabled on screen off</string>
-    <string name="screen_state_toggles_mobile_data">Disable mobile data</string>
-    <string name="screen_state_toggles_mobile_data_summary">Mobile data will be disabled on screen off</string>
+    <string name="screen_state_toggles_title">Приостановить действия</string>
+    <string name="screen_state_toggles_enable_title">Включить</string>
+    <string name="screen_state_toggles_enable_summary">Действия будут выполняться при выключении экрана. При включении экрана будет восстановлено предыдущее состояние.</string>
+    <string name="screen_state_toggles_mobile_title">Мобильные сети</string>
+    <string name="screen_state_toggles_location_title">Местоположение</string>
+    <string name="screen_state_toggles_twog">Переключить на 2G</string>
+    <string name="screen_state_toggles_twog_summary">Режим сети будет переключен на 2G при выключении экрана</string>
+    <string name="screen_state_toggles_gps">Отключить GPS</string>
+    <string name="screen_state_toggles_gps_summary">Определение местоположения при помощи GPS будет отключено при выключении экрана</string>
+    <string name="screen_state_toggles_mobile_data">Отключить мобильный интернет</string>
+    <string name="screen_state_toggles_mobile_data_summary">Мобильный интернет будет отключен при выключении экрана</string>
 	
 	<!-- Wakelock blocker -->
-	<string name="wakelock_blocker">Wakelock Blocker</string>
-	<string name="wakelock_blocker_title">Enable</string>
-	<string name="wakelock_blocker_summary">Activate blocking for checked wakelocks</string>
-	<string name="wakelock_blocker_save">Save</string>
-	<string name="wakelock_list_header">Available Wakelocks</string>
-	<string name="wakelock_blocker_reload">Reload</string>
-	<string name="wakelock_blocker_warning_title">Proceed with Caution</string>
-	<string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss.</string>
+	<string name="wakelock_blocker">Блокировщик активных процессов</string>
+	<string name="wakelock_blocker_title">Включить</string>
+	<string name="wakelock_blocker_summary">Применить блокировщик к обнаруженным активным процессам</string>
+	<string name="wakelock_blocker_save">Сохранить</string>
+	<string name="wakelock_list_header">Доступные активные процессы</string>
+	<string name="wakelock_blocker_reload">Перезагрузить</string>
+	<string name="wakelock_blocker_warning_title">Применять осторожно</string>
+	<string name="wakelock_blocker_warning">Блокирование активных процессов потенциально может вызвать нестабильную работу системы, её падение, или потерю данных.</string>
 
 </resources>
