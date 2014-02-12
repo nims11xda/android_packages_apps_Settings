@@ -50,6 +50,8 @@
 
     <!--Notification LED category header-->
     <string name="notification_led_category_title">Notification LED</string>
+    <string name="profile_choose_app">Choose app</string>
+    <string name="profiles_add">Add</string>
 
     <!--Notification light dialogs-->
     <string name="edit_light_settings">Edit light settings</string>
