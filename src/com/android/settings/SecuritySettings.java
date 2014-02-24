@@ -39,7 +39,6 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
-import android.preference.SeekBarPreference;
 import android.provider.Settings;
 import android.security.KeyStore;
 import android.telephony.TelephonyManager;
@@ -70,9 +69,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private static final String KEY_OWNER_INFO_SETTINGS = "owner_info_settings";
     private static final String KEY_ENABLE_WIDGETS = "keyguard_enable_widgets";
 
-    private static final String KEY_SEE_THROUGH = "see_through";
-    private static final String KEY_BLUR_RADIUS = "blur_radius";
-
     private static final String LOCK_NUMPAD_RANDOM = "lock_numpad_random";
     private static final String LOCK_BEFORE_UNLOCK = "lock_before_unlock";
 
@@ -92,7 +88,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private static final String KEY_CREDENTIALS_MANAGER = "credentials_management";
     private static final String KEY_NOTIFICATION_ACCESS = "manage_notification_access";
     private static final String PACKAGE_MIME_TYPE = "application/vnd.android.package-archive";
-    private static final String KEY_UNLOCK_CATEGORY = "unlock_category";
 
     private PackageManager mPM;
     private DevicePolicyManager mDPM;
@@ -114,9 +109,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private DialogInterface mWarnInstallApps;
     private CheckBoxPreference mToggleVerifyApps;
     private CheckBoxPreference mPowerButtonInstantlyLocks;
-    private CheckBoxPreference mSeeThrough;
-
-    private SeekBarPreference mBlurRadius;
 
     private ListPreference mLockNumpadRandom;
 
@@ -220,18 +212,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
             updateLockAfterPreferenceSummary();
         }
 
-        // lockscreen see through
-        mSeeThrough = (CheckBoxPreference) root.findPreference(KEY_SEE_THROUGH);
-        if (mSeeThrough != null) {
-            mSeeThrough.setChecked(Settings.System.getInt(getContentResolver(),
-                    Settings.System.LOCKSCREEN_SEE_THROUGH, 0) == 1);
-        }
-        mBlurRadius = (SeekBarPreference) root.findPreference(KEY_BLUR_RADIUS);
-        mBlurRadius.setProgress(Settings.System.getInt(getContentResolver(),
-                Settings.System.LOCKSCREEN_BLUR_RADIUS, 12));
-        mBlurRadius.setOnPreferenceChangeListener(this);
-        mBlurRadius.setEnabled(mSeeThrough.isChecked() && mSeeThrough.isEnabled());
-
         // biometric weak liveliness
         mBiometricWeakLiveliness =
                 (CheckBoxPreference) root.findPreference(KEY_BIOMETRIC_WEAK_LIVELINESS);
@@ -276,30 +256,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
 
         // Append the rest of the settings
         addPreferencesFromResource(R.xml.security_settings_misc);
-
-        final int deviceKeys = getResources().getInteger(
-                    com.android.internal.R.integer.config_deviceHardwareKeys);
-        final int KEY_MASK_HOME = 0x01;
-        final int KEY_MASK_MENU = 0x04;
-        CheckBoxPreference menuUnlock = (CheckBoxPreference)
-                    findPreference(Settings.System.MENU_UNLOCK_SCREEN);
-        CheckBoxPreference homeUnlock = (CheckBoxPreference)
-                    findPreference(Settings.System.HOME_UNLOCK_SCREEN);
-        PreferenceGroup unlockCategory = (PreferenceGroup)
-                    root.findPreference(KEY_UNLOCK_CATEGORY);
-
-        if ((deviceKeys & KEY_MASK_MENU) == 0 && (deviceKeys & KEY_MASK_HOME) == 0) {
-            root.removePreference(unlockCategory);
-        } else {
-            // Hide the MenuUnlock setting if no menu button is available
-            if ((deviceKeys & KEY_MASK_MENU) == 0) {
-                unlockCategory.removePreference(menuUnlock);
-            }
-            // Hide the HomeUnlock setting if no home button is available
-            if ((deviceKeys & KEY_MASK_HOME) == 0) {
-                unlockCategory.removePreference(homeUnlock);
-            }
-        }
 
         // Do not display SIM lock for devices without an Icc card
         TelephonyManager tm = TelephonyManager.getDefault();
@@ -646,12 +602,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
             } else {
                 setNonMarketAppsAllowed(false);
             }
-        } else if (preference == mSeeThrough) {
-            Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_SEE_THROUGH,
-                    mSeeThrough.isChecked() ? 1 : 0);
-            if (mSeeThrough.isChecked())
-                Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_WALLPAPER, 0);
-            mBlurRadius.setEnabled(mSeeThrough.isChecked());
         } else if (KEY_TOGGLE_VERIFY_APPLICATIONS.equals(key)) {
             Settings.Global.putInt(getContentResolver(), Settings.Global.PACKAGE_VERIFIER_ENABLE,
                     mToggleVerifyApps.isChecked() ? 1 : 0);
@@ -700,8 +650,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
                 Log.e("SecuritySettings", "could not persist lockAfter timeout setting", e);
             }
             updateLockAfterPreferenceSummary();
-        } else if (preference == mBlurRadius) {
-            Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_BLUR_RADIUS, (Integer)value);
         } else if (preference == mLockNumpadRandom) {
             Settings.Secure.putInt(getContentResolver(),
                     Settings.Secure.LOCK_NUMPAD_RANDOM,
