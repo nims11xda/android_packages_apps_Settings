@@ -36,7 +36,7 @@
         android:key="home_key"
         android:title="@string/hardware_keys_home_key_title" >
 
-        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
+        <com.android.settings.preference.SystemCheckBoxPreference
             android:key="home_wake_screen"
             android:title="@string/home_wake_title"
             android:summary="@string/home_wake_summary"
@@ -127,10 +127,34 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="camera_key"
+        android:title="@string/hardware_keys_camera_key_title" >
+
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
+            android:key="camera_wake_screen"
+            android:title="@string/camera_wake_title"
+            android:summary="@string/camera_wake_summary"
+            android:defaultValue="false" />
+
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
+            android:key="camera_sleep_on_release"
+            android:title="@string/camera_sleep_on_release_title"
+            android:summary="@string/camera_sleep_on_release_summary"
+            android:defaultValue="false" />
+
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
+            android:key="camera_music_controls"
+            android:title="@string/camera_music_controls_title"
+            android:summary="@string/camera_music_controls_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="volume_keys"
         android:title="@string/hardware_keys_volume_keys_title" >
 
-        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
+        <com.android.settings.preference.SystemCheckBoxPreference
             android:key="volume_wake_screen"
             android:title="@string/volume_wake_title"
             android:summary="@string/volume_wake_summary"
@@ -148,6 +172,19 @@
             android:key="swap_volume_buttons"
             android:title="@string/swap_volume_buttons_title"
             android:summary="@string/swap_volume_buttons_summary" />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:key="button_keys"
+        android:title="@string/button_keys_title">
+
+        <CheckBoxPreference
+            android:key="virtual_key_haptic_feedback"
+            android:title="@string/virtual_key_haptic_feedback_title"
+            android:summary="@string/virtual_key_haptic_feedback_summary"
+            android:persistent="false"/>
+
     </PreferenceCategory>
 
 </PreferenceScreen>

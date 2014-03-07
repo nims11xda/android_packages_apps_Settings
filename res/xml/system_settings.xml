@@ -16,15 +16,12 @@
         android:icon="@drawable/ic_settings_wakelock_blocker"
         android:fragment="com.android.settings.AOSPAL.WakeLockBlocker" />
 
+    <!-- Performance Controls -->
     <PreferenceScreen
         android:key="@+id/performance_controls"
+        android:fragment="com.brewcrewfoo.performance.activities.MainActivity"
         android:icon="@drawable/ic_settings_performance"
-        android:title="@string/performance_settings" >
-    <intent
-        android:targetPackage="com.brewcrewfoo.performance"
-        android:action="android.intent.action.MAIN"
-        android:targetClass="com.brewcrewfoo.performance.activities.MainActivity" />
-    </PreferenceScreen>
+        android:title="@string/performance_settings" />
 
     <PreferenceCategory
         android:title="@string/remix_settings_interface_title">
@@ -40,16 +37,43 @@
             android:title="@string/reverse_default_app_picker"
             android:summary="@string/reverse_default_app_picker_summary" />
 
+        <com.android.settings.preference.SystemCheckBoxPreference
+            android:key="double_tap_sleep_gesture"
+            android:title="@string/double_tap_to_sleep_title"
+            android:summary="@string/double_tap_to_sleep_summary"
+            android:defaultValue="false" />
+
+        <PreferenceScreen
+            android:key="progressbar_settings"
+            android:fragment="com.android.settings.cyanogenmod.ProgressBar"
+            android:title="@string/progressbar_title" />
+
+   </PreferenceCategory>
+
+   <PreferenceCategory
+            android:key="category_recent_panel"
+            android:title="@string/recent_apps_panel_title">
+
         <!-- Recents RAM bar -->
         <PreferenceScreen
             android:key="recents_ram_bar"
             android:fragment="com.android.settings.AOSPAL.RamBar"
             android:title="@string/ram_bar" />
 
-        <PreferenceScreen
-            android:key="progressbar_settings"
-            android:fragment="com.android.settings.cyanogenmod.ProgressBar"
-            android:title="@string/progressbar_title" />
+        <CheckBoxPreference
+            android:key="recent_menu_clear_all"
+            android:title="@string/show_recent_clear_all_button_title"
+            android:summary="@string/show_recent_clear_all_button_summary"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:key="recent_menu_clear_all_location"
+            android:title="@string/recent_clear_all_button_location_title"
+            android:summary="@string/recent_clear_all_button_location_summary"
+            android:entries="@array/recent_clear_all_button_location_entries"
+            android:entryValues="@array/recent_clear_all_button_location_values"
+            android:defaultValue="2"
+            android:dependency="recent_menu_clear_all" />
 
    </PreferenceCategory>
 

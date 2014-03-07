@@ -40,8 +40,9 @@
     <string name="qs_pulldown_summary">Allows to use the left or right side of the status bar to open the QuickSettings</string>
     <string name="statusbar_network_summary">Enables the network speed to appear in the Statusbar</string>
 
-    <!-- Statusbar: Double tap to sleep  -->
-    <string name="status_bar_double_tap_to_sleep_title">Double-tap to sleep</string>
+    <!-- Double tap to sleep  -->
+    <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="double_tap_to_sleep_summary">Either on Statusbar, Navigation Bar or Lockscreen</string>
 
     <!-- Anonymous Statistics #CM -->
     <string name="anonymous_statistics_title">CyanogenMod statistics</string>
@@ -498,6 +499,17 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ram_bar_button_reset">Reset colors</string>
     <string name="ram_bar_reset">Reset</string>
     <string name="ram_bar_reset_message">Reset RAM bar style to default?</string>
+
+    <!--  Recents clear all -->
+    <string name="recent_apps_panel_title" >Recents Apps Panel</string>
+    <string name="show_recent_clear_all_button_title">Show clear all button</string>
+    <string name="show_recent_clear_all_button_summary">Tick to show or untick to hide the clear all button within the recent applications screen</string>
+    <string name="recent_clear_all_button_location_title">Clear all button position</string>
+    <string name="recent_clear_all_button_location_summary">Choose in which corner the clear all recent apps button is shown</string>
+    <string name="recent_clear_all_button_location_top_left">Top left</string>
+    <string name="recent_clear_all_button_location_top_right">Top right</string>
+    <string name="recent_clear_all_button_location_bottom_left">Bottom left</string>
+    <string name="recent_clear_all_button_location_bottom_right">Bottom right</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -1078,6 +1090,14 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="noti_reminder_sound_title">Notify sound</string>
     <string name="noti_reminder_sound_looping">Until dismissed</string>
     <string name="noti_reminder_ringtone">Notify ringtone</string>
+    <string name="noti_reminder_interval">Flip interval</string>
+    <string name="noti_reminder_interval_1s">1 second</string>
+    <string name="noti_reminder_interval_1dot5s">1.5 seconds</string>
+    <string name="noti_reminder_interval_2s">2 seconds</string>
+    <string name="noti_reminder_interval_2dot5s">2.5 seconds</string>
+    <string name="noti_reminder_interval_3s">3 seconds</string>
+    <string name="noti_reminder_interval_3dot5s">3.5 second</string>
+    <string name="noti_reminder_interval_4s">4 seconds</string>
 
     <!-- Smooth ProgressBar -->
     <string name="progressbar_title">Custom ProgressBar</string>
@@ -1118,4 +1138,17 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="toast_Translucent_animation">Translucent Animation</string>
     <string name="toast_SlideLeftRight_animation">Slide Left To Right Animation</string>
     <string name="toast_SlideRightLeft_animation">Slide Right To Left Animation</string>
+
+    <!-- Keyguard always show battery -->
+    <string name="lockscreen_battery_status_title">Battery status</string>
+    <string name="lockscreen_battery_status_summary">Always show battery status on keyguard</string>
+
+    <!-- Partition Info -->
+    <string name="partition_info_title">Partition info</string>
+    <string name="partition_info_system">/system</string>
+    <string name="partition_info_data">/data</string>
+    <string name="partition_info_cache">/cache</string>
+    <string name="partition_info_sdcard">/sdcard (FAT)</string>
+    <string name="partition_info_sdext">/sd-ext (EXT)</string>
+    <string name="partition_info_used_of">/</string>
 </resources>
