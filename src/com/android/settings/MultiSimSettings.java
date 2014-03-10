@@ -397,9 +397,6 @@ public class MultiSimSettings extends PreferenceActivity implements DialogInterf
             } else {
                 status = getResources().getString(R.string.set_voice_error);
                 displayAlertDialog(status);
-                Log.w(TAG, "setVoiceSubscription: sub=" + mVoiceSub
-                        + " failed due to sub not activated");
-                return false;
             }
         }
 
@@ -431,8 +428,6 @@ public class MultiSimSettings extends PreferenceActivity implements DialogInterf
             } else {
                 status = getResources().getString(R.string.set_sms_error);
                 displayAlertDialog(status);
-                Log.w(TAG, "setSMSSub: sub=" + smsSub + " failed due to sub not activated");
-                return false;
             }
             mHandler.sendMessage(mHandler.obtainMessage(EVENT_SET_SMS_SUBSCRIPTION));
         }
@@ -451,9 +446,6 @@ public class MultiSimSettings extends PreferenceActivity implements DialogInterf
             } else {
                 status = getResources().getString(R.string.set_priority_sub_error);
                 displayAlertDialog(status);
-                Log.w(TAG, "setPrioritySub: sub=" + prioritySubIndex
-                        + " failed due to sub not activated");
-                return false;
             }
         }
 
