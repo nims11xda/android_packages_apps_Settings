@@ -31,7 +31,7 @@
     <!-- General strings -->
     <string name="default_string">Default</string>
     <string name="enabled">Enabled</string>
-    <string name="performance_settings">Performance</string>
+    <string name="kernel_tweaker">Kernel Tweaker</string>
     <string name="personalize">Personalize</string>
     <string name="controls">Controls</string>
 
@@ -293,11 +293,6 @@ USB networks). This setting is reset on reboot</string>
     <string name="battery_bar_percent">Bar &amp; percent</string>
     <string name="battery_circle">Circle</string>
     <string name="battery_circle_percent">Circle &amp; percent</string>
-
-    <!--Double tap to sleep-->
-    <string name="gesture_category_title">Gestures</string>
-    <string name="double_tap_to_sleep_title">Double tap to sleep</string>
-    <string name="double_tap_to_sleep_summary">Double tap statusbar to lock device</string>
 
     <!-- Message of dialog confirming that user wants to restart their device with a new runtime -->
     <string name="custom_runtime_warning_title">Warning</string>
