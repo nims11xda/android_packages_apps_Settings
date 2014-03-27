@@ -15,9 +15,6 @@
 -->
 
 <resources>
-    <color name="holo_bright">#ffCCCCCC</color>
-    <color name="holo_light">#ff999999</color>
-    <color name="white">#FFF</color>
     <color name="black">#000</color>
     <color name="red">#F00</color>
 
@@ -49,8 +46,6 @@
     <color name="auto_brightness_preview_foreground">@android:color/white</color>
     <color name="auto_brightness_preview_markers">@android:color/holo_blue_light</color>
     <color name="auto_brightness_preview_grid">#44ffffff</color>
-
-    <color name="tab_selector">#FFFFFFFF</color>
 
     <!-- Gesture Anywhere -->
     <color name="ga_gesture_color">@android:color/holo_blue_light</color>

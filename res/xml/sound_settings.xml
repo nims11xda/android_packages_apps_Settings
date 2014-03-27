@@ -19,11 +19,6 @@
         android:key="sound_settings"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <PreferenceScreen
-        android:key="quiet_hours_settings"
-        android:fragment="com.android.settings.paranoid.QuietHours"
-        android:title="@string/quiet_hours_title" />
-
     <com.android.settings.RingerVolumePreference
             android:key="ring_volume"
             android:title="@string/all_volume_title"
@@ -73,11 +68,6 @@
             android:dialogTitle="@string/notification_sound_dialog_title"
             android:persistent="false"
             android:ringtoneType="notification" />
-
-    <PreferenceScreen
-            android:key="sound_packages"
-            android:fragment="com.android.settings.AOSPAL.SoundPackageSettings"
-            android:title="@string/sound_packages_title" />
 
     <CheckBoxPreference
             android:key="dtmf_tone"

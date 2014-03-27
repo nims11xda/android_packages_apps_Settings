@@ -50,6 +50,8 @@ import java.io.IOException;
 import java.lang.CharSequence;
 import java.lang.String;
 
+import org.cyanogenmod.hardware.KeyDisabler;
+
 public class NavBarSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
@@ -57,6 +59,7 @@ public class NavBarSettings extends SettingsPreferenceFragment implements
     private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
     private static final String NAVIGATION_BAR_CATEGORY = "navigation_bar";
     private static final String NAVIGATION_BAR_LEFT = "navigation_bar_left";
+    private static final String NAVIGATION_BAR_INFO = "navigation_bar_info";
     private static final String ENABLE_NAVIGATION_BAR = "enable_nav_bar";
 
     private SeekBarPreference mNavigationBarHeight;
@@ -77,7 +80,7 @@ public class NavBarSettings extends SettingsPreferenceFragment implements
         boolean hasNavBarByDefault = getResources().getBoolean(
                 com.android.internal.R.bool.config_showNavigationBar);
         boolean enableNavigationBar = Settings.System.getInt(getContentResolver(),
-                Settings.System.NAVIGATION_BAR_SHOW, hasNavBarByDefault ? 1 : 0) == 1;
+                Settings.System.DEV_FORCE_SHOW_NAVBAR, hasNavBarByDefault ? 1 : 0) == 1;
         mEnableNavigationBar = (CheckBoxPreference) findPreference(ENABLE_NAVIGATION_BAR);
         mEnableNavigationBar.setChecked(enableNavigationBar);
         mEnableNavigationBar.setOnPreferenceChangeListener(this);
@@ -88,6 +91,15 @@ public class NavBarSettings extends SettingsPreferenceFragment implements
         if (!DeviceUtils.isPhone(getActivity())) {
             navbarSettings.removePreference(findPreference(NAVIGATION_BAR_LEFT));
         }
+
+        if (KeyDisabler.isSupported() || hasNavBarByDefault == true) {
+            navbarSettings.removePreference(mEnableNavigationBar);
+        }
+
+        if (!KeyDisabler.isSupported() || hasNavBarByDefault == true) {
+            navbarSettings.removePreference(findPreference(NAVIGATION_BAR_INFO));
+        }
+
     }
 
     @Override
@@ -104,7 +116,7 @@ public class NavBarSettings extends SettingsPreferenceFragment implements
             mNavigationBarHeight.setTitle(getResources().getText(R.string.navigation_bar_height) + " " + (Integer)newValue + "%");
         } else if (preference == mEnableNavigationBar) {
             Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.NAVIGATION_BAR_SHOW,
+                    Settings.System.DEV_FORCE_SHOW_NAVBAR,
                     ((Boolean) newValue) ? 1 : 0);
             mNavigationBarHeight.setEnabled((Boolean)newValue);
         } else {

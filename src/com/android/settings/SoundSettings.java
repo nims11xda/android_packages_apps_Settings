@@ -105,16 +105,15 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mDtmfTone;
     private CheckBoxPreference mSoundEffects;
     private CheckBoxPreference mHapticFeedback;
-    private SeekBarPreference mVibrationDuration;
-    private Preference mMusicFx;
     private CheckBoxPreference mLockSounds;
-    private Preference mRingtonePreference;
-    private Preference mNotificationPreference;
-
+    private CheckBoxPreference mVolumeWakeScreen;
     private CheckBoxPreference mPowerSounds;
     private CheckBoxPreference mPowerSoundsVibrate;
+    private SeekBarPreference mVibrationDuration;
+    private Preference mMusicFx;
+    private Preference mRingtonePreference;
+    private Preference mNotificationPreference;
     private Preference mPowerSoundsRingtone;
-
 
     private Runnable mRingtoneLookupRunnable;
 
@@ -420,9 +419,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             launchNotificationSoundPicker(REQUEST_CODE_POWER_NOTIFICATIONS_RINGTONE,
                     Settings.Global.getString(getContentResolver(),
                             Settings.Global.POWER_NOTIFICATIONS_RINGTONE));
-        } else {
-            // If we didn't handle it, let preferences handle it.
-            return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
         return true;
     }

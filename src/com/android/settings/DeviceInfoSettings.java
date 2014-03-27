@@ -33,6 +33,8 @@ import android.preference.PreferenceScreen;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.android.settings.deviceinfo.msim.MSimStatus;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileReader;
@@ -70,6 +72,10 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
     private static final String KEY_EQUIPMENT_ID = "fcc_equipment_id";
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
     private static final String KEY_PA_VERSION = "pa_version";
+    private static final String KEY_PSD_VERSION = "psd_version";
+    private static final String KEY_SM_AND = "sm_android";
+    private static final String KEY_SM_ARM = "sm_arm";
+    private static final String KEY_BUILD_DATE ="build_date";
     private static final String KEY_PARANOIDOTA = "paranoidota_settings";
     private static final String KEY_DEVICE_CPU = "device_cpu";
     private static final String KEY_DEVICE_MEMORY = "device_memory";
@@ -105,6 +111,10 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
         findPreference(KEY_PA_VERSION).setEnabled(true);
         setValueSummary(KEY_PA_VERSION, "ro.pa.version");
+        setValueSummary(KEY_PSD_VERSION, "ro.psd.version");
+        setValueSummary(KEY_SM_AND, "ro.sm.android");
+        setValueSummary(KEY_SM_ARM, "ro.sm.arm");
+        setValueSummary(KEY_BUILD_DATE, "ro.build.date");
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);

@@ -16,41 +16,6 @@
    limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Notification LED -->
-    <!-- Values for the notification light pulse spinners -->
-    <string-array name="notification_pulse_length_entries" translatable="false">
-        <item>@string/pulse_length_always_on</item>
-        <item>@string/pulse_length_very_short</item>
-        <item>@string/pulse_length_short</item>
-        <item>@string/pulse_length_normal</item>
-        <item>@string/pulse_length_long</item>
-        <item>@string/pulse_length_very_long</item>
-    </string-array>
-
-    <string-array name="notification_pulse_length_values" translatable="false">
-        <item>1</item>
-        <item>250</item>
-        <item>500</item>
-        <item>1000</item>
-        <item>2500</item>
-        <item>5000</item>
-    </string-array>
-
-    <string-array name="notification_pulse_speed_entries" translatable="false">
-        <item>@string/pulse_speed_very_fast</item>
-        <item>@string/pulse_speed_fast</item>
-        <item>@string/pulse_speed_normal</item>
-        <item>@string/pulse_speed_slow</item>
-        <item>@string/pulse_speed_very_slow</item>
-    </string-array>
-
-    <string-array name="notification_pulse_speed_values" translatable="false">
-        <item>250</item>
-        <item>500</item>
-        <item>1000</item>
-        <item>2500</item>
-        <item>5000</item>
-    </string-array>
 
     <!--Volume buttons cursor control-->
     <string-array name="volume_key_cursor_control_entries">
@@ -201,47 +166,6 @@
         <item>60000</item>
     </string-array>
 
-    <string-array name="entries_halo_state">
-        <item>@string/halo_state_black</item>
-        <item>@string/halo_state_white</item>
-    </string-array>
-
-    <string-array name="values_halo_state" translatable="false">
-        <item>1</item>
-        <item>0</item>
-    </string-array>
-
-    <string-array name="entries_halo_size">
-        <item>@string/halo_size_miniscule</item>
-        <item>@string/halo_size_small</item>
-        <item>@string/halo_size_default</item>
-        <item>@string/halo_size_large</item>
-        <item>@string/halo_size_gigantic</item>
-        <item>@string/halo_size_monster</item>
-    </string-array>
-    <string-array name="values_halo_size" translatable="false">
-        <item>0.6</item>
-        <item>0.8</item>
-        <item>1.0</item>
-        <item>1.2</item>
-        <item>1.4</item>
-        <item>1.6</item>
-    </string-array>
-
-    <string-array name="entries_halo_notification_count">
-        <item>@string/halo_notification_count_none</item>
-        <item>@string/halo_notification_count_total</item>
-        <item>@string/halo_notification_count_individual</item>
-        <item>@string/halo_notification_count_both</item>
-    </string-array>
-
-    <string-array name="values_halo_notification_count">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-    </string-array>
-
     <!-- Network usage stats -->
     <string-array name="entries_status_bar_network_stats_update">
         <item>&#189; second</item>
@@ -268,93 +192,130 @@
         <item>1</item>
     </string-array>
 
-    <!-- Increasing Ring -->
-    <string-array name="increasing_ring_interval_entries" translatable="false">
-        <item>@string/increasing_ring_interval_eachring</item>
-        <item>@string/increasing_ring_interval_half_second</item>
-        <item>@string/increasing_ring_interval_1second</item>
-        <item>@string/increasing_ring_interval_2seconds</item>
-        <item>@string/increasing_ring_interval_3seconds</item>
-        <item>@string/increasing_ring_interval_5seconds</item>
-        <item>@string/increasing_ring_interval_10seconds</item>
+    <!-- Nfc Polling Mode -->
+    <string-array name="nfc_polling_entries" translatable="false">
+        <item>@string/nfc_polling_always</item>
+        <item>@string/nfc_polling_screenon_lock</item>
+        <item>@string/nfc_polling_screenon_unlock</item>
     </string-array>
-
-    <integer-array name="increasing_ring_interval_values" translatable="false">
-        <item>0</item>
-        <item>500</item>
-        <item>1000</item>
-        <item>2000</item>
-        <item>3000</item>
-        <item>5000</item>
-        <item>10000</item>
-    </integer-array>
-
-    <string-array name="entries_battery_submenu">
-        <item>@string/battery_bar</item>
-        <item>@string/battery_bar_percent</item>
-        <item>@string/battery_circle</item>
-        <item>@string/battery_circle_percent</item>
-    </string-array>
-
-    <string-array name="values_battery_submenu" translatable="false">
-        <item>0</item>
+    <string-array name="nfc_polling_values" translatable="false">
         <item>1</item>
         <item>2</item>
         <item>3</item>
     </string-array>
 
-    <!-- Screen recorder video sizes -->
-    <string-array name="screen_recorder_video_sizes">
-        <item>@string/screen_recorder_size_240x400</item>
-        <item>@string/screen_recorder_size_360x640</item>
-        <item>@string/screen_recorder_size_480x800</item>
-        <item>@string/screen_recorder_size_480x854</item>
-        <item>@string/screen_recorder_size_540x960</item>
-        <item>@string/screen_recorder_size_600x1024</item>
-        <item>@string/screen_recorder_size_720x1280</item>
+    <!-- Statusbar clock -->
+
+    <string-array name="clock_style_entries" translatable="false">
+        <item>@string/right_clock</item>
+        <item>@string/center_clock</item>
     </string-array>
 
-    <!-- Screen recorder bitrates -->
-    <string-array name="screen_recorder_bitrate_entries">
-        <item>@string/screen_recorder_bitrate_title_100000</item>
-        <item>@string/screen_recorder_bitrate_title_250000</item>
-        <item>@string/screen_recorder_bitrate_title_500000</item>
-        <item>@string/screen_recorder_bitrate_title_1000000</item>
-        <item>@string/screen_recorder_bitrate_title_2000000</item>
-        <item>@string/screen_recorder_bitrate_title_3000000</item>
-        <item>@string/screen_recorder_bitrate_title_4000000</item>
-        <item>@string/screen_recorder_bitrate_title_5000000</item>
-        <item>@string/screen_recorder_bitrate_title_10000000</item>
-        <item>@string/screen_recorder_bitrate_title_20000000</item>
-        <item>@string/screen_recorder_bitrate_title_50000000</item>
-        <item>@string/screen_recorder_bitrate_title_100000000</item>
-    </string-array>
-    <string-array name="screen_recorder_bitrate_values">
-        <item>@string/screen_recorder_bitrate_100000</item>
-        <item>@string/screen_recorder_bitrate_250000</item>
-        <item>@string/screen_recorder_bitrate_500000</item>
-        <item>@string/screen_recorder_bitrate_1000000</item>
-        <item>@string/screen_recorder_bitrate_2000000</item>
-        <item>@string/screen_recorder_bitrate_3000000</item>
-        <item>@string/screen_recorder_bitrate_4000000</item>
-        <item>@string/screen_recorder_bitrate_5000000</item>
-        <item>@string/screen_recorder_bitrate_10000000</item>
-        <item>@string/screen_recorder_bitrate_20000000</item>
-        <item>@string/screen_recorder_bitrate_50000000</item>
-        <item>@string/screen_recorder_bitrate_100000000</item>
+    <string-array name="clock_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
     </string-array>
 
-    <!-- Themes -->
-    <string-array name="theme_auto_mode_entries">
-        <item>@string/theme_auto_mode_off</item>
-        <item>@string/theme_auto_mode_lightsensor</item>
-        <item>@string/theme_auto_mode_twilight</item>
+    <string-array name="entries_status_bar_am_pm">
+        <item>@string/am_pm_clock_none</item>
+        <item>@string/am_pm_clock_small</item>
+        <item>@string/am_pm_clock_normal</item>
     </string-array>
 
-    <string-array name="theme_auto_mode_values" translatable="false">
+    <string-array name="values_status_bar_am_pm" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
+    </string-array>
+
+    <string-array name="clock_date_display_entries">
+        <item>@string/clock_date_display_none</item>
+        <item>@string/clock_date_display_small</item>
+        <item>@string/clock_date_display_normal</item>
+    </string-array>
+
+    <string-array name="clock_date_display_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="clock_date_style_entries">
+        <item>@string/clock_date_style_normal</item>
+        <item>@string/clock_date_style_lowercase</item>
+        <item>@string/clock_date_style_uppercase</item>
+    </string-array>
+
+    <string-array name="clock_date_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="clock_date_format_entries_values">
+        <item>dd/MM/yy</item>
+        <item>MM/dd/yy</item>
+        <item>yyyy-MM-dd</item>
+        <item>yyyy-dd-MM</item>
+        <item>dd-MM-yyyy</item>
+        <item>MM-dd-yyyy</item>
+        <item>MMM dd</item>
+        <item>MMM dd, yyyy</item>
+        <item>MMMM dd, yyyy</item>
+        <item>EEE</item>
+        <item>EEE dd</item>
+        <item>EEE dd/MM</item>
+        <item>EEE MM/dd</item>
+        <item>EEE dd MMM</item>
+        <item>EEE MMM dd</item>
+        <item>EEE MMMM dd</item>
+        <item>EEEE dd/MM</item>
+        <item>EEEE MM/dd</item>
+        <item>@string/clock_date_format_custom</item>
+    </string-array>
+
+    <!-- Smart pulldown -->
+    <string-array name="smart_pulldown_entries" translatable="false">
+        <item>@string/smart_pulldown_off</item>
+        <item>@string/smart_pulldown_dismissable</item>
+        <item>@string/smart_pulldown_persistent</item>
+    </string-array>
+
+    <string-array name="smart_pulldown_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="telo_radio_2g_screenoff_values" translatable="false">
+        <item>30000</item>
+        <item>60000</item>
+        <item>180000</item>
+        <item>300000</item>
+        <item>600000</item>
+        <item>900000</item>
+        <item>1200000</item>
+    </string-array>
+
+    <string-array name="telo_radio_2g_screenoff_entries" translatable="false">
+        <item>@string/telo_radio_2g_30secs</item>
+        <item>@string/telo_radio_2g_1min</item>
+        <item>@string/telo_radio_2g_3min</item>
+        <item>@string/telo_radio_2g_5min</item>
+        <item>@string/telo_radio_2g_10min</item>
+        <item>@string/telo_radio_2g_15min</item>
+        <item>@string/telo_radio_2g_20min</item>
+    </string-array>
+
+    <!-- Gesture Anywhere -->
+    <string-array name="gesture_anywhere_position_entries" translatable="false">
+        <item>@string/gesture_anywhere_position_left</item>
+        <item>@string/gesture_anywhere_position_right</item>
+    </string-array>
+
+    <string-array name="gesture_anywhere_position_values" translatable="false">
+        <item>3</item>
+        <item>5</item>
     </string-array>
 
     <string-array name="lockscreen_icon_picker_labels" translatable="false">
