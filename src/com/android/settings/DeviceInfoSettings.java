@@ -33,8 +33,6 @@ import android.preference.PreferenceScreen;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.android.settings.deviceinfo.msim.MSimStatus;
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileReader;
