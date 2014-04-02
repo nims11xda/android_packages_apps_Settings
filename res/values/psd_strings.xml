@@ -37,6 +37,19 @@
     <string name="personalize">Personalize</string>
     <string name="controls">Controls</string>
     <string name="attention">Attention</string>
+    <string name="more">More</string>
+
+   <!-- Remix Settings -->
+    <string name="remix_settings_title">Additional Settings</string>
+    <string name="remix_settings_system_title">System</string>
+    <string name="remix_settings_animations_title">Animations</string>
+    <string name="remix_settings_statusbar_title">Status Bar</string>
+    <string name="remix_settings_qs_title">Quick Settings</string>
+    <string name="remix_settings_lockscreen_title">Lockscreen</string>
+    <string name="remix_settings_interface_title">Interface</string>
+    <string name="remix_settings_notification_drawer_qs">Notification Drawer and QS</string>
+    <string name="remix_settings_notification_drawer">Notification Drawer</string>
+    <string name="remix_settings_bugreport">Bug Report</string>
 
     <!-- Remix Settings - Summaries -->
     <string name="navigation_ring_summary">Set custom navigation bar targets besides than Google Now</string>
@@ -44,8 +57,8 @@
     <string name="statusbar_network_summary">Enables the network speed to appear in the Statusbar</string>
 
     <!-- Double tap to sleep  -->
-    <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
-    <string name="double_tap_to_sleep_summary">Either on Statusbar, Navigation Bar or Lockscreen</string>
+    <string name="double_tap_to_sleep_lockscreen_title">Double-tap to sleep on lockscreen</string>
+    <string name="double_tap_to_sleep_status_bar_title">Double-tap to sleep on status bar</string>
 
     <!-- Anonymous Statistics #CM -->
     <string name="anonymous_statistics_title">CyanogenMod statistics</string>
@@ -410,10 +423,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="force_dualpanel_title">Force dual panel</string>
     <string name="force_dualpanel_summary">This will enable/disable dual panel settings"</string>
 
-    <!-- Add option to hide power menu when screen is locked -->
-    <string name="lockscreen_power_menu_title">Enable power menu</string>
-    <string name="lockscreen_power_menu_summary">Show power menu when screen is locked</string>
-
     <!-- Lockscreen style settings -->
     <string name="lockscreen_style_reset_message">Reset all lockscreen colors?</string>
     <string name="lockscreen_icon_title">Lock handle icon</string>
@@ -562,15 +571,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="telo_radio_info_category">Information TeloRadio</string>
     <string name="telo_radio_info_title">About the Connection Manager</string>
     <string name="telo_radio_info_summary">The connection manager TeloRadio &#169; is a feature created by Telo (TeloKang ROM) Android Inc. Original Idea atl4ntis (Cataclysm ROM).</string>
-
-    <!-- Sound themes -->
-    <string name="sound_packages_title">Sound packs</string>
-    <string name="install_sound_pack_title">Install sound pack</string>
-    <string name="install_sound_pack_summary">Install new sound packs added in SoundPacks folder on the internal storage</string>
-    <string name="select_sound_pack_title">Select sound pack</string>
-    <string name="select_sound_pack_summary">Select the active sound pack</string>
-    <string name="default_sound_pack">Default (System)</string>
-    <string name="error_pack_install">Error while installing the sound pack</string>
 
    <!-- Home & Menu key unlock -->
     <string name="unlock_menu_unlock_title">Menu unlock</string>
@@ -867,10 +867,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="toast_Translucent_animation">Translucent Animation</string>
     <string name="toast_SlideLeftRight_animation">Slide Left To Right Animation</string>
     <string name="toast_SlideRightLeft_animation">Slide Right To Left Animation</string>
-
-    <!-- Keyguard always show battery -->
-    <string name="lockscreen_battery_status_title">Battery status</string>
-    <string name="lockscreen_battery_status_summary">Always show battery status on keyguard</string>
 
     <!-- Partition Info -->
     <string name="partition_info_title">Partition info</string>
